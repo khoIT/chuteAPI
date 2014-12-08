@@ -8,8 +8,8 @@
  * Controller of the mytodoApp
  */
 angular.module('mytodoApp')
-  .controller('GalleryCtrl', function ($scope, $http, $localStorage) {
-        
+  .controller('GalleryCtrl', function ($scope, $http, $localStorage, Lightbox) {
+
       if (typeof $localStorage.photos === 'undefined'){
           $scope.photos = [];
           //pulling data from chute album
@@ -59,6 +59,9 @@ angular.module('mytodoApp')
                 (random * $scope.photos.length), 1
             )
             $localStorage.photos = angular.toJson($scope.photos);
+        };
+        $scope.openLightboxModal = function (index) {
+          Lightbox.openModal($scope.photos, index);
         };
     });
 

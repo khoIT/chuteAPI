@@ -17,6 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngStorage',
+    'bootstrapLightbox',
     'wu.masonry'
   ])
   .config(function ($routeProvider) {

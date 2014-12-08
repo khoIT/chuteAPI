@@ -12,13 +12,14 @@
             <button class="btn btn-primary" ng-click="add()">Load more Images</button>
             <button class="btn btn-default" ng-click="remove()">Remove an Image</button>
         </div>
-        
+
         <div masonry>
             <div class="masonry-photo" ng-repeat="photo in photos">
+              <a ng-click="openLightboxModal($index)">
                 <img ng-src="{{ photo.url }}" alt="A masonry brick">
+              </a>
             </div>
         </div>
     </div>
-</div>        
-
 </div>
+
