@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngStorage',
     'wu.masonry'
   ])
   .config(function ($routeProvider) {
